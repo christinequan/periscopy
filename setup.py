@@ -3,11 +3,9 @@ import setuptools
 INSTALL_REQUIRES = [
     'numpy>=1.9.3',
     'pandas>=0.15.2',
-    'matplotlib>=1.4.3',
-]
+    'matplotlib>=1.4.3']
 
-with open("./README.MD", "r") as fh:
-    long_description = fh.read()
+long_description = "Welcome to Periscopy - a home for beautiful visualizations."
 
 setuptools.setup(
     name="periscopy",
