@@ -9,7 +9,7 @@ long_description = "Welcome to Periscopy - a home for beautiful visualizations."
 
 setuptools.setup(
     name="periscopy",
-    version="0.0.1",
+    version="0.0.2",
     author="Christine Quan",
     author_email="christine.quan11@gmail.com",
     description="periscopy: business data visualization",
