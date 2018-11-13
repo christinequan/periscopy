@@ -10,7 +10,7 @@ import numpy as np
 ###														LIBRARIES															###
 #######################################################################
 
-__all__ = ["radial_chart"]
+__all__ = ["chart"]
 
 #######################################################################
 ###													HELPER FUNCTIONS												###
@@ -88,8 +88,8 @@ def get_currency_label(num):
 def add_current_label(first, second):
   currency = get_currency_label(first)
 
-  return plt.text(1.5 * np.cos(0.5 *np.pi - 2 * np.pi * (first % second /second)),
-           1.5 * np.sin(0.5 *np.pi - 2 * np.pi * first % second / second),
+  return plt.text(1.5 * np.cos(0.5 *np.pi - 2 * np.pi * (first /second)),
+           1.5 * np.sin(0.5 *np.pi - 2 * np.pi * first / second),
            currency,
            horizontalalignment=horizontal_aligner(first, second),
            verticalalignment=vertical_aligner(first, second),
@@ -109,7 +109,7 @@ def add_sub_center_label(second):
 ###													MAIN FUNCTION														###
 #######################################################################
 
-def radial_chart(current, goal, color_theme = 'Purple'):
+def chart(current, goal, color_theme = 'Purple', width = 5, height = 5, dpi = 100):
 
 
   first = current
@@ -123,7 +123,7 @@ def radial_chart(current, goal, color_theme = 'Purple'):
 
   # set up plot
   ring_arrays = calculate_rings(first, second)
-  fig, ax = plt.subplots()
+  fig, ax = plt.subplots(figsize = (width,height), dpi = dpi)
 
   if first > second:
     ring_to_label = 0

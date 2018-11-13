@@ -1,4 +1,7 @@
 setup.py
+periscopy/_init_.py
+periscopy/changeinkpi.py
+periscopy/radialprogress.py
 periscopy.egg-info/PKG-INFO
 periscopy.egg-info/SOURCES.txt
 periscopy.egg-info/dependency_links.txt

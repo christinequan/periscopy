@@ -1,3 +1,2 @@
-from radialprogresschart import .
-
-__version__ = "0.1.0"
+from .radialprogress import *
+from .changeinkpi import *
